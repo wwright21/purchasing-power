@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<head>
+    <title>Local Purchasing Power</title>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0010d429cb4e418fceed4ccde2f5528c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_0010d429cb4e418fceed4ccde2f5528c" ></div>
+        
+</body>
+<script>    
+    
+            var map_0010d429cb4e418fceed4ccde2f5528c = L.map(
+                "map_0010d429cb4e418fceed4ccde2f5528c",
+                {
+                    center: [38.37020936008731, -96.60504556106412],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: false,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_be14af630c3c9428d5a43cbf9ade6bdd = L.tileLayer(
+                "https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoid3dyaWdodDIxIiwiYSI6ImNsNmNnbW92cjF3YXczY281NXRua25xMHgifQ.1Xa_wr0DUhuoNGP0Cbe5Kg",
+                {"attribution": "Mapbox", "detectRetina": false, "maxNativeZoom": 30, "maxZoom": 30, "minZoom": 5, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0010d429cb4e418fceed4ccde2f5528c);
+        
+    
+            var feature_group_8c43db0ab0cfcf9efc6358277539eb32 = L.featureGroup(
+                {}
+            ).addTo(map_0010d429cb4e418fceed4ccde2f5528c);
+        
+    
+            var circle_marker_4c55fd5c52b81bfb6197819179a94827 = L.circleMarker(
+                [21.31003276, -157.8605136],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffbd00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.0425, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_4c55fd5c52b81bfb6197819179a94827.bindTooltip(
+                `<div>
+                     Honolulu, HI<br>Purchasing Power (NYC Base 100): 92.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eb5cf86f9742ff74a9a9350f69b85f2f = L.circleMarker(
+                [34.42152778, -119.6968718],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.2375, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_eb5cf86f9742ff74a9a9350f69b85f2f.bindTooltip(
+                `<div>
+                     Santa Barbara, CA<br>Purchasing Power (NYC Base 100): 85.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_71e2e0ebafe7d05dc9df95abdcdadf13 = L.circleMarker(
+                [40.74432058, -73.99078024],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_71e2e0ebafe7d05dc9df95abdcdadf13.bindTooltip(
+                `<div>
+                     New York, NY<br>Purchasing Power (NYC Base 100): 100.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_000cc7a9c90009509a5965efbfa88e40 = L.circleMarker(
+                [37.7577, -122.4376],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 34.8, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_000cc7a9c90009509a5965efbfa88e40.bindTooltip(
+                `<div>
+                     San Francisco, CA<br>Purchasing Power (NYC Base 100): 139.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9c1dc97d58b5c4010a161d12c1b19395 = L.circleMarker(
+                [37.8054714, -122.2723879],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a4ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 32.1475, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_9c1dc97d58b5c4010a161d12c1b19395.bindTooltip(
+                `<div>
+                     Oakland, CA<br>Purchasing Power (NYC Base 100): 128.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b2848759d2deaaa014f02aa20b13bf74 = L.circleMarker(
+                [61.21155805, -149.8889713],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b6ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.75, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_b2848759d2deaaa014f02aa20b13bf74.bindTooltip(
+                `<div>
+                     Anchorage, AK<br>Purchasing Power (NYC Base 100): 123.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e0a1aedfe0118e4d452ed1f03d548593 = L.circleMarker(
+                [47.61098873, -122.3420645],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4aff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.205, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_e0a1aedfe0118e4d452ed1f03d548593.bindTooltip(
+                `<div>
+                     Seattle, WA<br>Purchasing Power (NYC Base 100): 156.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7728432b837f58124e6e3d5c79074c81 = L.circleMarker(
+                [38.8937545, -77.014576],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#afff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.2775, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_7728432b837f58124e6e3d5c79074c81.bindTooltip(
+                `<div>
+                     Washington, DC<br>Purchasing Power (NYC Base 100): 125.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dc8980018634506169a48ce1e0772b84 = L.circleMarker(
+                [42.36166733, -71.0600244],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b6ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.75, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_dc8980018634506169a48ce1e0772b84.bindTooltip(
+                `<div>
+                     Boston, MA<br>Purchasing Power (NYC Base 100): 123.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cfca99bdf52ca44f10b75544513f78b9 = L.circleMarker(
+                [37.3706739, -121.9675526],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2fff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 41.285, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_cfca99bdf52ca44f10b75544513f78b9.bindTooltip(
+                `<div>
+                     Santa Clara, CA<br>Purchasing Power (NYC Base 100): 165.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_76a8ad22634cbb09fc07c53052e223a4 = L.circleMarker(
+                [38.56173395, -121.4429125],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f3ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.015, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_76a8ad22634cbb09fc07c53052e223a4.bindTooltip(
+                `<div>
+                     Sacramento, CA<br>Purchasing Power (NYC Base 100): 104.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_89c134ba012cc7ec20de4d3fbc6e3f79 = L.circleMarker(
+                [39.74927328, -104.9948211],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9eff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 32.655, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_89c134ba012cc7ec20de4d3fbc6e3f79.bindTooltip(
+                `<div>
+                     Denver, CO<br>Purchasing Power (NYC Base 100): 130.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_506e5926a10258f141667471177e9e13 = L.circleMarker(
+                [40.44153195, -80.00015702],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.1625, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_506e5926a10258f141667471177e9e13.bindTooltip(
+                `<div>
+                     Pittsburgh, PA<br>Purchasing Power (NYC Base 100): 104.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2c24a26cb9d2e3248dc9a7a74d061e8e = L.circleMarker(
+                [37.33960089, -121.8905682],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#40ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.9725, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_2c24a26cb9d2e3248dc9a7a74d061e8e.bindTooltip(
+                `<div>
+                     San Jose, CA<br>Purchasing Power (NYC Base 100): 159.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9f24fc1db4bc7d8469413221c65a8170 = L.circleMarker(
+                [36.16374665, -86.78022385],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.185, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_9f24fc1db4bc7d8469413221c65a8170.bindTooltip(
+                `<div>
+                     Nashville, TN<br>Purchasing Power (NYC Base 100): 100.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_798444625f8c8e35e1a011774b21c9d1 = L.circleMarker(
+                [45.54271395, -122.6544011],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#deff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.6425, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_798444625f8c8e35e1a011774b21c9d1.bindTooltip(
+                `<div>
+                     Portland, OR<br>Purchasing Power (NYC Base 100): 110.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6d599164118cecfd3bef8a08f27e2e04 = L.circleMarker(
+                [25.7824075, -80.22945845],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffb300ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.76, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_6d599164118cecfd3bef8a08f27e2e04.bindTooltip(
+                `<div>
+                     Miami, FL<br>Purchasing Power (NYC Base 100): 91.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_19a1cff48f179bdac6a7984003224c6a = L.circleMarker(
+                [32.71639624, -117.1628009],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#aaff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.65, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_19a1cff48f179bdac6a7984003224c6a.bindTooltip(
+                `<div>
+                     San Diego, CA<br>Purchasing Power (NYC Base 100): 126.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_71325877258b454608221f21153a9b53 = L.circleMarker(
+                [35.59532881, -82.55216204],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6800ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.5675, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_71325877258b454608221f21153a9b53.bindTooltip(
+                `<div>
+                     Asheville, NC<br>Purchasing Power (NYC Base 100): 82.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_170b439620cccd1230be361c31538a3c = L.circleMarker(
+                [34.05030442, -118.2417929],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b9ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.4725, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_170b439620cccd1230be361c31538a3c.bindTooltip(
+                `<div>
+                     Los Angeles, CA<br>Purchasing Power (NYC Base 100): 121.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_47681051abdfe68ebb179c23456006fd = L.circleMarker(
+                [41.88002118, -87.6307469],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d2ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.58, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_47681051abdfe68ebb179c23456006fd.bindTooltip(
+                `<div>
+                     Chicago, IL<br>Purchasing Power (NYC Base 100): 114.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_23b31fb4bd22b71a49c8aa78a1d4b1e1 = L.circleMarker(
+                [44.9397075, -93.1060534],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e3ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.2075, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_23b31fb4bd22b71a49c8aa78a1d4b1e1.bindTooltip(
+                `<div>
+                     Saint Paul, MN<br>Purchasing Power (NYC Base 100): 108.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f19c763ae48ea00a1e67baa8a78304f3 = L.circleMarker(
+                [33.68429154, -117.8270829],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#88ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 34.36, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_f19c763ae48ea00a1e67baa8a78304f3.bindTooltip(
+                `<div>
+                     Irvine, CA<br>Purchasing Power (NYC Base 100): 137.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_40ed94b42ffa4deccb818ccdd5243061 = L.circleMarker(
+                [27.96118936, -82.45725388],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.155, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_40ed94b42ffa4deccb818ccdd5243061.bindTooltip(
+                `<div>
+                     Tampa, FL<br>Purchasing Power (NYC Base 100): 112.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4c0d11b89744bc9cffc42b124f3aef45 = L.circleMarker(
+                [39.9528158, -75.16428289],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b3ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.9875, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_4c0d11b89744bc9cffc42b124f3aef45.bindTooltip(
+                `<div>
+                     Philadelphia, PA<br>Purchasing Power (NYC Base 100): 124.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_17a34b1a15e9b1aa4ec0a70ad9f9de68 = L.circleMarker(
+                [33.02012881, -96.69905925],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c9ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.28, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_17a34b1a15e9b1aa4ec0a70ad9f9de68.bindTooltip(
+                `<div>
+                     Plano, TX<br>Purchasing Power (NYC Base 100): 117.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6f37d6a2bb3a323e72dd7a225209c9f8 = L.circleMarker(
+                [29.95206173, -90.07182736],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7500ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.9425, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_6f37d6a2bb3a323e72dd7a225209c9f8.bindTooltip(
+                `<div>
+                     New Orleans, LA<br>Purchasing Power (NYC Base 100): 83.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b1a6ed548021af9ac388e7c4be178eb7 = L.circleMarker(
+                [38.83696958, -104.8218039],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8aff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 34.1925, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_b1a6ed548021af9ac388e7c4be178eb7.bindTooltip(
+                `<div>
+                     Colorado Springs, CO<br>Purchasing Power (NYC Base 100): 136.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2b6a9f806b6fb51dfabde1696f8b7b07 = L.circleMarker(
+                [41.25737774, -95.9348229],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ecff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.5225, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_2b6a9f806b6fb51dfabde1696f8b7b07.bindTooltip(
+                `<div>
+                     Omaha, NE<br>Purchasing Power (NYC Base 100): 106.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8f5e41ab3ec74dcd95b75ed630824c26 = L.circleMarker(
+                [44.970697, -93.2614785],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c8ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.3525, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_8f5e41ab3ec74dcd95b75ed630824c26.bindTooltip(
+                `<div>
+                     Minneapolis, MN<br>Purchasing Power (NYC Base 100): 117.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_023aabfa8bd35776ef67209abcbb965b = L.circleMarker(
+                [33.5312374, -86.85013695],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff2100ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.4925, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_023aabfa8bd35776ef67209abcbb965b.bindTooltip(
+                `<div>
+                     Birmingham, AL<br>Purchasing Power (NYC Base 100): 74.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d56fb1f572c7c1e41ce5ffaa7502a8d5 = L.circleMarker(
+                [32.77869979, -96.79995232],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#97ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.1575, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_d56fb1f572c7c1e41ce5ffaa7502a8d5.bindTooltip(
+                `<div>
+                     Dallas, TX<br>Purchasing Power (NYC Base 100): 132.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bbe8959deb3f971c618a3618dc3fec63 = L.circleMarker(
+                [42.89623895, -78.8644423],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e9ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.79, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_bbe8959deb3f971c618a3618dc3fec63.bindTooltip(
+                `<div>
+                     Buffalo, NY<br>Purchasing Power (NYC Base 100): 107.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_102ec3705fdf12fd235eb3dc4fcc30d1 = L.circleMarker(
+                [33.75140836, -84.38869106],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b4ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.8875, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_102ec3705fdf12fd235eb3dc4fcc30d1.bindTooltip(
+                `<div>
+                     Atlanta, GA<br>Purchasing Power (NYC Base 100): 123.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bbfe217484f2cff79ec73a4846d274d6 = L.circleMarker(
+                [39.2847064, -76.62049675],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b8ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.5875, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_bbfe217484f2cff79ec73a4846d274d6.bindTooltip(
+                `<div>
+                     Baltimore, MD<br>Purchasing Power (NYC Base 100): 122.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6203a2162ce26c4cd130c47d16a343ac = L.circleMarker(
+                [35.04599214, -85.31012294],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffc200ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.2025, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_6203a2162ce26c4cd130c47d16a343ac.bindTooltip(
+                `<div>
+                     Chattanooga, TN<br>Purchasing Power (NYC Base 100): 92.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7704b3d3e3bc9a26211427af4f93d8ac = L.circleMarker(
+                [26.1411125, -80.14556705],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fcff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.2875, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_7704b3d3e3bc9a26211427af4f93d8ac.bindTooltip(
+                `<div>
+                     Fort Lauderdale, FL<br>Purchasing Power (NYC Base 100): 101.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fd4491e82f2335c7c15219c568f5fe5a = L.circleMarker(
+                [39.7797845, -86.13275],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b0ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.19, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_fd4491e82f2335c7c15219c568f5fe5a.bindTooltip(
+                `<div>
+                     Indianapolis, IN<br>Purchasing Power (NYC Base 100): 124.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_02506e5c3b6a052318b5dd5d13f2fc77 = L.circleMarker(
+                [33.44673972, -112.0778726],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b9ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.475, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_02506e5c3b6a052318b5dd5d13f2fc77.bindTooltip(
+                `<div>
+                     Phoenix, AZ<br>Purchasing Power (NYC Base 100): 121.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4e848a3636522e8d32e781a49fe14595 = L.circleMarker(
+                [41.497532, -81.70585995],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c5ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.5875, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_4e848a3636522e8d32e781a49fe14595.bindTooltip(
+                `<div>
+                     Cleveland, OH<br>Purchasing Power (NYC Base 100): 118.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_87d527f4d1a1ae6603d059c89ec1441d = L.circleMarker(
+                [39.53069307, -119.8155158],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7900ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.045, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_87d527f4d1a1ae6603d059c89ec1441d.bindTooltip(
+                `<div>
+                     Reno, NV<br>Purchasing Power (NYC Base 100): 84.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e266c017374958cc14c8d3c0e33328b9 = L.circleMarker(
+                [37.55048354, -121.9906598],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 45.3875, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_e266c017374958cc14c8d3c0e33328b9.bindTooltip(
+                `<div>
+                     Fremont, CA<br>Purchasing Power (NYC Base 100): 181.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_115b9586fa622774fda7a5f8cf3297ef = L.circleMarker(
+                [47.67284045, -117.41215],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffb400ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.775, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_115b9586fa622774fda7a5f8cf3297ef.bindTooltip(
+                `<div>
+                     Spokane, WA<br>Purchasing Power (NYC Base 100): 91.1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fffd95647cfb072ca02934e757f980a5 = L.circleMarker(
+                [36.78553345, -119.7945615],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e4ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.115, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_fffd95647cfb072ca02934e757f980a5.bindTooltip(
+                `<div>
+                     Fresno, CA<br>Purchasing Power (NYC Base 100): 108.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_202a291a5691ff0b63035684d015c676 = L.circleMarker(
+                [42.352711, -83.099205],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#deff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.6425, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_202a291a5691ff0b63035684d015c676.bindTooltip(
+                `<div>
+                     Detroit, MI<br>Purchasing Power (NYC Base 100): 110.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_71778198c82e5b6ade3619fe3fa6415b = L.circleMarker(
+                [32.75756822, -97.33000489],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d3ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.495, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_71778198c82e5b6ade3619fe3fa6415b.bindTooltip(
+                `<div>
+                     Fort Worth, TX<br>Purchasing Power (NYC Base 100): 114.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3ace5c71e096aeb0c79baec1812735b4 = L.circleMarker(
+                [36.125, -115.175],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e4ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.1475, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_3ace5c71e096aeb0c79baec1812735b4.bindTooltip(
+                `<div>
+                     Las Vegas, NV<br>Purchasing Power (NYC Base 100): 108.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_80ba049029dfe4897a1dc4a03c9d6fe3 = L.circleMarker(
+                [39.98295145, -82.990829],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a4ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 32.13, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_80ba049029dfe4897a1dc4a03c9d6fe3.bindTooltip(
+                `<div>
+                     Columbus, OH<br>Purchasing Power (NYC Base 100): 128.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_beb30fcfd2c4b5826ca335724535fd12 = L.circleMarker(
+                [28.53879096, -81.37835307],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d2ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.555, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_beb30fcfd2c4b5826ca335724535fd12.bindTooltip(
+                `<div>
+                     Orlando, FL<br>Purchasing Power (NYC Base 100): 114.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5e5096fe5c7c1fb2d41b8208e79e3b09 = L.circleMarker(
+                [41.08436705, -81.5129779],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff5d00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.235, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_5e5096fe5c7c1fb2d41b8208e79e3b09.bindTooltip(
+                `<div>
+                     Akron, OH<br>Purchasing Power (NYC Base 100): 80.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d14a01ffaf6b93bf53ba13f8f438bb9c = L.circleMarker(
+                [42.9563584, -85.660089],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c5ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.58, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_d14a01ffaf6b93bf53ba13f8f438bb9c.bindTooltip(
+                `<div>
+                     Grand Rapids, MI<br>Purchasing Power (NYC Base 100): 118.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_01647827ac246e630cc2bd57e797eca0 = L.circleMarker(
+                [30.34499, -81.6831069],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#99ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 32.995, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_01647827ac246e630cc2bd57e797eca0.bindTooltip(
+                `<div>
+                     Jacksonville, FL<br>Purchasing Power (NYC Base 100): 132.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_842429004ac1deccf201a38068b47068 = L.circleMarker(
+                [30.3077609, -97.7534014],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#68ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.8625, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_842429004ac1deccf201a38068b47068.bindTooltip(
+                `<div>
+                     Austin, TX<br>Purchasing Power (NYC Base 100): 147.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9d40ae3ae84a31392d5cb3c1620e502c = L.circleMarker(
+                [35.20315345, -80.83982895],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#85ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 34.57, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_9d40ae3ae84a31392d5cb3c1620e502c.bindTooltip(
+                `<div>
+                     Charlotte, NC<br>Purchasing Power (NYC Base 100): 138.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ebddad5023cf547f376bf87731cf0175 = L.circleMarker(
+                [33.77304569, -118.195524],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cbff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.12, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_ebddad5023cf547f376bf87731cf0175.bindTooltip(
+                `<div>
+                     Long Beach, CA<br>Purchasing Power (NYC Base 100): 116.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4f249f30b7e9c54f3e74e16c5fa0cfd3 = L.circleMarker(
+                [43.07241751, -89.40092205],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 28.08, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_4f249f30b7e9c54f3e74e16c5fa0cfd3.bindTooltip(
+                `<div>
+                     Madison, WI<br>Purchasing Power (NYC Base 100): 112.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7f3692050a6023390b7fb6376190f37c = L.circleMarker(
+                [43.60080605, -116.233898],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff3b00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.255, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_7f3692050a6023390b7fb6376190f37c.bindTooltip(
+                `<div>
+                     Boise, ID<br>Purchasing Power (NYC Base 100): 77.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cc69718b424f25574cd19da39b1b00da = L.circleMarker(
+                [42.65296607, -73.75697003],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#95ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.34, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_cc69718b424f25574cd19da39b1b00da.bindTooltip(
+                `<div>
+                     Albany, NY<br>Purchasing Power (NYC Base 100): 133.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9608b1bac17610e9dce76e0541b40d37 = L.circleMarker(
+                [43.04045303, -87.90655451],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a5ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 32.0875, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_9608b1bac17610e9dce76e0541b40d37.bindTooltip(
+                `<div>
+                     Milwaukee, WI<br>Purchasing Power (NYC Base 100): 128.3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f94dd0de41412e7e16a1807a03e52105 = L.circleMarker(
+                [32.22644525, -110.9753636],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffda00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.9025, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_f94dd0de41412e7e16a1807a03e52105.bindTooltip(
+                `<div>
+                     Tucson, AZ<br>Purchasing Power (NYC Base 100): 95.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_883877926e6967ef986129497ac71d72 = L.circleMarker(
+                [29.81717795, -95.40129145],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#46ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.48, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_883877926e6967ef986129497ac71d72.bindTooltip(
+                `<div>
+                     Houston, TX<br>Purchasing Power (NYC Base 100): 157.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_adf8a6c11fdb11fd2b660e6ab52b1c26 = L.circleMarker(
+                [40.77660795, -111.9204851],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b9ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.5025, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_adf8a6c11fdb11fd2b660e6ab52b1c26.bindTooltip(
+                `<div>
+                     Salt Lake City, UT<br>Purchasing Power (NYC Base 100): 122.0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4c09b7a240dd53d81521740e00cead55 = L.circleMarker(
+                [38.25460567, -85.76017382],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bdff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.215, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_4c09b7a240dd53d81521740e00cead55.bindTooltip(
+                `<div>
+                     Louisville, KY<br>Purchasing Power (NYC Base 100): 120.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_451418fd571c740f0e6fe748d318ce27 = L.circleMarker(
+                [38.65310045, -90.243462],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e4ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.14, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_451418fd571c740f0e6fe748d318ce27.bindTooltip(
+                `<div>
+                     Saint Louis, MO<br>Purchasing Power (NYC Base 100): 108.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9a9e5f9a956a298fdf7b98b8d7079917 = L.circleMarker(
+                [39.13634005, -84.54040145],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b0ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.1775, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_9a9e5f9a956a298fdf7b98b8d7079917.bindTooltip(
+                `<div>
+                     Cincinnati, OH<br>Purchasing Power (NYC Base 100): 124.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9912440312f4dda37c74e4b4228b8185 = L.circleMarker(
+                [39.091919, -94.5757195],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b6ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.735, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_9912440312f4dda37c74e4b4228b8185.bindTooltip(
+                `<div>
+                     Kansas City, MO<br>Purchasing Power (NYC Base 100): 122.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6b79e1f92cd44701122b49b1cd5992dd = L.circleMarker(
+                [35.78068027, -78.64051035],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#94ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.3625, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_6b79e1f92cd44701122b49b1cd5992dd.bindTooltip(
+                `<div>
+                     Raleigh, NC<br>Purchasing Power (NYC Base 100): 133.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bdf668bd8b4ed5da6b26e99339aa1667 = L.circleMarker(
+                [33.41687939, -111.8283557],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe100ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.115, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_bdf668bd8b4ed5da6b26e99339aa1667.bindTooltip(
+                `<div>
+                     Mesa, AZ<br>Purchasing Power (NYC Base 100): 96.5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d6c878b6eeb558cd1545fb08aba46bbe = L.circleMarker(
+                [35.48264795, -97.47919745],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#baff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.46, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_d6c878b6eeb558cd1545fb08aba46bbe.bindTooltip(
+                `<div>
+                     Oklahoma City, OK<br>Purchasing Power (NYC Base 100): 121.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_828a3794d80f35b4e2b302db7cd48a3a = L.circleMarker(
+                [35.0824099, -106.6764795],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6eff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.35, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_828a3794d80f35b4e2b302db7cd48a3a.bindTooltip(
+                `<div>
+                     Albuquerque, NM<br>Purchasing Power (NYC Base 100): 145.4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e3ec53c9e47496b45a9eb6142e0b5d8f = L.circleMarker(
+                [36.15484689, -95.99426967],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b3ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.98, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_e3ec53c9e47496b45a9eb6142e0b5d8f.bindTooltip(
+                `<div>
+                     Tulsa, OK<br>Purchasing Power (NYC Base 100): 123.9
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_09f416944b309bcfaf72cbd64a746c3f = L.circleMarker(
+                [35.95846195, -83.9250825],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b7ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.675, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_09f416944b309bcfaf72cbd64a746c3f.bindTooltip(
+                `<div>
+                     Knoxville, TN<br>Purchasing Power (NYC Base 100): 122.7
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3ee9b3a1e4679a9b18f2fb1edc5050f8 = L.circleMarker(
+                [29.4585735, -98.51437645],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5aff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.96, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_3ee9b3a1e4679a9b18f2fb1edc5050f8.bindTooltip(
+                `<div>
+                     San Antonio, TX<br>Purchasing Power (NYC Base 100): 151.8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6fd3a658d12fe5c12e2b89b4844e6ce5 = L.circleMarker(
+                [35.129186, -89.97078695],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#64ff00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.155, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_6fd3a658d12fe5c12e2b89b4844e6ce5.bindTooltip(
+                `<div>
+                     Memphis, TN<br>Purchasing Power (NYC Base 100): 148.6
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9c6609e2eeb44d0ce3039340ebfa2cf9 = L.circleMarker(
+                [37.68815761, -97.32946319],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffdf00ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.0475, "stroke": true, "weight": 3}
+            ).addTo(feature_group_8c43db0ab0cfcf9efc6358277539eb32);
+        
+    
+            circle_marker_9c6609e2eeb44d0ce3039340ebfa2cf9.bindTooltip(
+                `<div>
+                     Wichita, KS<br>Purchasing Power (NYC Base 100): 96.2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": false, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_0010d429cb4e418fceed4ccde2f5528c);
+        
+</script>
